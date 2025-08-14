@@ -1,9 +1,9 @@
 <script>
-useHead({
-  // as a string,
-  // where `%s` is replaced with the title
-  title: "O nás",
-});
+// useHead({
+//   // as a string,
+//   // where `%s` is replaced with the title
+//   title: "O nás",
+// });
 </script>
 
 <template>

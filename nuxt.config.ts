@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
-
+  css: ["~/assets/css/style.css"],
   modules: [
     "@nuxt/content",
     "@nuxt/eslint",
@@ -12,6 +12,20 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
   ],
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          // Theme used in all color schemes.
+          theme: {
+            default: "github-light",
+            dark: "github-dark",
+            sepia: "monokai",
+          },
+        },
+      },
+    },
+  },
   colorMode: {
     classSuffix: "",
   },
