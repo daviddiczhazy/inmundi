@@ -1,20 +1,20 @@
 ---
-title: "Prvý článok"
-description: "meta description of the page"
-published: 2025-01-01 17:00
+title: "Úvodné slovo"
+description: "Úvod do nášho blogu"
+published: 2023-09-01 17:00
 ---
 
-# First post on our website
+# Úvodný článok
 
-## Introduction
+## Úvod
 
-This is some text. _This is italic_.
+Toto je nejaký text. _Toto je kurzíva_.
 
-## Second Part
+## Druhá časť
 
-Something more. **This is bold**.
+Niečo viac. **Toto je tučné písmo**.
 
-### Also try lists
+### Skúste aj zoznamy
 
 Unordered lists:
 

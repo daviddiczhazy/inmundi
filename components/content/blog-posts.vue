@@ -4,6 +4,7 @@ const { data: docs } = await useAsyncData("documents-list", async () => {
     .where("path", "<>", "/blog")
     .select("path", "title", "description", "meta")
     .all();
+
   return allDocs.sort((a, b) =>
     (b.meta?.published || "") > (a.meta?.published || "") ? 1 : -1
   );
@@ -27,7 +28,6 @@ const posts = computed(() => {
   }
   return result;
 });
-console.log("Documents:", docs);
 </script>
 
 <template>
