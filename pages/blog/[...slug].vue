@@ -46,21 +46,31 @@ onMounted(() => {
   <div
     class="prose dark:prose-invert max-w-none prose-h1:text-2xl prose-pre:bg-white dark:prose-pre:bg-gray-800 prose-pre:text-gray-700"
   >
-    <div class="grid grid-cols-6 gap-16 mt-8">
-      <div
-        :class="{
-          'col-span-4': page?.meta?.toc,
-          'col-span-6': !page?.meta?.toc,
-        }"
-      >
-        <ContentRenderer v-if="page" :value="page" />
+    <template v-if="page">
+      <div class="grid grid-cols-6 gap-16 mt-8">
+        <div
+          :class="{
+            'col-span-4': page?.meta?.toc,
+            'col-span-6': !page?.meta?.toc,
+          }"
+        >
+          <ContentRenderer :value="page" />
+        </div>
+        <div v-if="page?.meta?.toc" class="col-span-2 not-prose">
+          <aside class="sticky top-8">
+            <div class="font-semibold mb-2">Obsah</div>
+            <TocLinks :links="page?.body?.toc?.links" :active-id="activeId" />
+          </aside>
+        </div>
       </div>
-      <div v-if="page?.meta?.toc" class="col-span-2 not-prose">
-        <aside class="sticky top-8">
-          <div class="font-semibold mb-2">Obsah</div>
-          <TocLinks :links="page?.body?.toc?.links" :active-id="activeId" />
-        </aside>
+    </template>
+
+    <template v-else>
+      <div class="empty-page">
+        <h1>Stránka sa nenašla - 404</h1>
+        <p>Prepáčte! Obsah, ktorý hľadáte, neexistuje.</p>
+        <NuxtLink to="/blog">Naspäť na blog</NuxtLink>
       </div>
-    </div>
+    </template>
   </div>
 </template>

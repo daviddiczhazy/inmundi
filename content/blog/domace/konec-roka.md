@@ -1,6 +1,6 @@
 ---
 title: "Koniec roka 2024"
-description: "meta description of the page"
+description: "Koniec roka je časom, kedy sa bilancuje a plánuje do budúcnosti"
 published: 2024-12-22 15:00
 Author: "Alfed Petrov"
 toc: true

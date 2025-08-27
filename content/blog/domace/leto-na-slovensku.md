@@ -1,6 +1,6 @@
 ---
 title: "Leto na Slovensku"
-description: "meta description of the page"
+description: "Mnohé rodiny plánujú dovolenky a výlety do prírody"
 published: 2025-05-01 12:00
 Author: "Martin Sabol"
 toc: true

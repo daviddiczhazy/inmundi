@@ -6,7 +6,7 @@ export default defineContentConfig({
       // Specify the type of content in this collection
       type: "page",
       // Load every file inside the `content` directory
-      source: "blog/**",
+      source: "**",
       // Include metadata in the document
     }),
   },
