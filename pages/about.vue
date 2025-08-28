@@ -1,4 +1,6 @@
 <script>
+import FooterSection from "~/components/FooterSection.vue";
+
 // useHead({
 //   // as a string,
 //   // where `%s` is replaced with the title
@@ -8,6 +10,7 @@
 
 <template>
   <div>
-    <h2>O nás</h2>
+    <h2 class="text-2xl font-bold">O projekte</h2>
+    <FooterSection />
   </div>
 </template>

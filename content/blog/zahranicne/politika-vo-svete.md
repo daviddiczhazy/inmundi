@@ -1,8 +1,8 @@
 ---
 title: "Politika vo svete"
-description: "Najnovšie správy a analýzy"
+description: "Prinášame vám najnovšie správy a analýzy z politiky vo svete ..."
 published: 2025-03-11 17:00
-author: "Marek Takol"
+Author: "Marek Takol"
 toc: true
 ---
 

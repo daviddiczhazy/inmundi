@@ -22,8 +22,6 @@ const { data: docs } = await useAsyncData("documents-list", async () => {
   );
 });
 
-console.log("DOCS: ", docs.value);
-
 const posts = computed(() => {
   if (!docs.value) return [];
 
@@ -61,7 +59,7 @@ const posts = computed(() => {
       </div>
       <NuxtLink v-for="post in posts" :key="post.path" :to="post.path">
         <div
-          class="flex justify-between group border-b border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 px-2"
+          class="flex justify-between group border-b border-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 space-x-8 px-2"
         >
           <div class="flex items-center space-x-8 py-2">
             <div
@@ -83,6 +81,12 @@ const posts = computed(() => {
         </div>
       </NuxtLink>
     </div>
+    <h3 class="mt-8 text-lg font-semibold italic">
+      Toto je ukážkový Nuxt projekt
+    </h3>
+    <NuxtLink to="/about" class="text-blue-500 hover:underline"
+      >Viac info</NuxtLink
+    >
   </slot>
 </template>
 

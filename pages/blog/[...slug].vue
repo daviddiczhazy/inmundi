@@ -47,7 +47,7 @@ onMounted(() => {
     class="prose dark:prose-invert max-w-none prose-h1:text-2xl prose-pre:bg-white dark:prose-pre:bg-gray-800 prose-pre:text-gray-700"
   >
     <template v-if="page">
-      <div class="grid grid-cols-6 gap-16 mt-8">
+      <div class="grid grid-cols-6 gap-16 mt-4">
         <div
           :class="{
             'col-span-4': page?.meta?.toc,
