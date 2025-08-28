@@ -1,9 +1,12 @@
 <script lang="ts" setup>
+useHead({
+  title: "Domov",
+});
+
 const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection("docs").path(route.path).first();
 });
-console.log("page", page);
 </script>
 
 <template>

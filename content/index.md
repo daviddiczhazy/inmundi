@@ -1,3 +1,5 @@
-Zaujímavé správy zo sveta technológií, kultúry a spoločnosti.
+---
+title: "Domov"
+---
 
 ::blog-posts

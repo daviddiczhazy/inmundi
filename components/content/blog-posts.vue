@@ -1,6 +1,15 @@
 <script setup lang="ts">
+import type { DocsCollectionItem } from "@nuxt/content";
+import { computed } from "vue";
+
 interface TocLink {
   category?: string;
+}
+
+interface BlogPost
+  extends Pick<DocsCollectionItem, "path" | "title" | "description" | "meta"> {
+  displayYear: boolean;
+  year: number;
 }
 
 const props = withDefaults(defineProps<TocLink>(), {
@@ -22,23 +31,25 @@ const { data: docs } = await useAsyncData("documents-list", async () => {
   );
 });
 
-const posts = computed(() => {
+const posts = computed<BlogPost[]>(() => {
   if (!docs.value) return [];
 
-  const result = [];
+  const result: BlogPost[] = [];
   let lastyear = null;
   const blogs = docs.value.filter((post) =>
     post.path.includes(`blog/${props.category}`)
   );
 
   for (const post of blogs) {
-    const year = new Date(post?.meta?.published).getFullYear();
+    const year = new Date(String(post?.meta?.published)).getFullYear();
 
     const dislplayYear = year !== lastyear;
 
-    post.displayYear = dislplayYear;
-    post.year = year;
-    result.push(post);
+    result.push({
+      ...post,
+      displayYear: dislplayYear,
+      year: year,
+    });
     lastyear = year;
   }
   return result;

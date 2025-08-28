@@ -29,7 +29,7 @@ type Link = {
 };
 
 interface TocLink {
-  links: Link[];
+  links: Link[] | undefined;
   level?: number;
   activeId?: string | null;
 }

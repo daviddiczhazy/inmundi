@@ -1,11 +1,7 @@
 <script>
-import FooterSection from "~/components/FooterSection.vue";
-
-// useHead({
-//   // as a string,
-//   // where `%s` is replaced with the title
-//   title: "O nás",
-// });
+useHead({
+  title: "O Projekte",
+});
 </script>
 
 <template>
