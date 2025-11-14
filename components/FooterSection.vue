@@ -13,7 +13,7 @@
     <p class="text-gray-600 italic mt-4">
       Odkaz na repozitár:
       <a
-        href="https://github.com/"
+        href="https://github.com/daviddiczhazy/inmundi"
         target="_blank"
         rel="noopener noreferrer"
         class="underline"
